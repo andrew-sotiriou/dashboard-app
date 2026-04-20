@@ -39,4 +39,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 This is a dashboard app to practice Typescript, NextJS, React, and more senior level development techniques
 
-The first step was just to install and setup everything, which would be refining Typescript settings, integrating Prettier/ESLINT and VSCODE settings for those
+The first step was just to install and setup everything, which would be refining Typescript settings, integrating Prettier/ESLINT and VSCODE settings for those.
+
+Created the folder directory:
+
+- app -> for routing only
+- components -> reusable UI building block
+- features -> app logic
+- lib -> pure utilities
+- types -> shared TypeScript models
+- hooks -> reusable React hooks
+- services -> API and external systems
