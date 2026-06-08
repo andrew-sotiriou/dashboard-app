@@ -21,8 +21,13 @@ export type ChartBlock = BaseBlock & {
   data: number[];
 };
 
+export type ImageBlock = BaseBlock & {
+  type: 'image';
+  url: string;
+};
+
 // UNION OF ALL BLOCKS
-export type Block = TextBlock | TableBlock | ChartBlock;
+export type Block = TextBlock | TableBlock | ChartBlock | ImageBlock;
 
 // DASHBOARD MODEL
 export type Dashboard = {
