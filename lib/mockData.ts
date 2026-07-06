@@ -23,5 +23,10 @@ export const mockDashboard: Dashboard = {
       type: 'chart',
       data: [10, 20, 15, 30],
     },
+    {
+      id: 'b4',
+      type: 'image',
+      url: '/next.svg',
+    },
   ],
 };

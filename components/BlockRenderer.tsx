@@ -1,4 +1,8 @@
 import { Block } from '../types/dashboard';
+import { TextBlock } from './blocks/textBlock';
+import { TableBlock } from './blocks/tableBlock';
+import { ChartBlock } from './blocks/chartBlock';
+import { ImageBlock } from './blocks/imageBlock';
 
 type Props = {
   block: Block;
@@ -7,28 +11,16 @@ type Props = {
 export function BlockRenderer({ block }: Props) {
   switch (block.type) {
     case 'text':
-      return <div>{block.content}</div>;
+      return <TextBlock block={block} />;
 
     case 'table':
-      return (
-        <table>
-          <tbody>
-            {block.rows.map((row, i) => (
-              <tr key={i}>
-                {row.map((cell, j) => (
-                  <td key={j}>{cell}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      );
+      return <TableBlock block={block} />;
 
     case 'chart':
-      return <pre>{JSON.stringify(block.data, null, 2)}</pre>;
+      return <ChartBlock block={block} />;
 
     case 'image':
-      return <img src={block.url} />;
+      return <ImageBlock block={block} />;
   }
 
   // 🧠 Exhaustiveness check (critical line)
